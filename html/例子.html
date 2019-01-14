@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js">
+		
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	// $(function(){
+	// 	$.get("http://127.0.0.1/test/Day190102/json/dete.json",
+	// 		function(res){
+	// 			console.log(res)
+	// 		})
+	// })
+	$(function(){
+		$.ajax({
+			url:"http://127.0.0.1/text/html/ex01.json",
+			type:"get",
+			success:function(res){
+				//当获取成功时
+				console.log(res)
+			},
+			error:function(err){
+				//当获取失败时
+				console.log(err)
+			},
+			complete:function(){
+				//无论成功、失败都会执行
+				console.log("ajax完成")
+			}
+		})
+	})
+</script>
+</body>
